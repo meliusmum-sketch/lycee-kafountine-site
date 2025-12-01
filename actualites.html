@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualités - Lycée de Kafountine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; background-color: #f5f5f5; }
+        header { background-color: #0b4f6c; color: #fff; padding: 10px 20px; }
+        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; }
+        .logo { font-weight: bold; font-size: 20px; }
+        .menu { list-style: none; display: flex; gap: 15px; padding: 0; margin: 0; }
+        .menu li a { color: #fff; text-decoration: none; font-size: 14px; text-transform: uppercase; }
+        .menu li a:hover { text-decoration: underline; }
+        main { max-width: 1100px; margin: 0 auto; padding: 20px 15px 40px; background-color: #fff; }
+        h1 { font-size: 26px; color: #0b4f6c; }
+        h2 { font-size: 20px; color: #0b4f6c; margin-top: 20px; }
+        .news-item { margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
+        .news-item small { color: #666; }
+        footer { background-color: #222; color: #ddd; padding: 15px 20px; font-size: 13px; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Lycée de Kafountine</div>
+        <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="le-lycee.html">Le Lycée</a></li>
+            <li><a href="administration.html">Administration</a></li>
+            <li><a href="enseignements.html">Enseignements</a></li>
+            <li><a href="actualites.html">Actualités</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Actualités du Lycée</h1>
+
+    <div class="news-item">
+        <h2>Journée de l’excellence</h2>
+        <small>Publié le 15 juin 2024</small>
+        <p>
+            Le lycée a célébré la journée de l’excellence en récompensant les meilleurs élèves
+            de chaque niveau et série.
+        </p>
+    </div>
+
+    <div class="news-item">
+        <h2>Semaine culturelle</h2>
+        <small>Publié le 3 mai 2024</small>
+        <p>
+            Théâtre, musique, danse, expositions : la semaine culturelle a permis aux élèves
+            d’exprimer leurs talents et de valoriser la diversité culturelle.
+        </p>
+    </div>
+
+    <div class="news-item">
+        <h2>Résultats du Baccalauréat</h2>
+        <small>Publié le 30 juillet 2024</small>
+        <p>
+            Découvrez les résultats du baccalauréat et le taux de réussite du lycée pour la session en cours.
+        </p>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <p><strong>Lycée de Kafountine</strong> – Kafountine, Sénégal</p>
+        <p>Tél. : [Numéro du secrétariat] – E-mail : [adresse e-mail officielle]</p>
+        <p>&copy; <span id="year"></span> Lycée de Kafountine – Tous droits réservés.</p>
+    </div>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</footer>
+
+</body>
+</html>
