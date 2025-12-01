@@ -5,20 +5,34 @@
     <title>Lycée de Kafountine - Accueil</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        :root {
+            --blue: #0b4f6c;
+            --blue-light: #126a8e;
+            --gold: #f5a623;
+            --green: #2e8b57;
+            --bg: #f3f5f7;
+            --text: #222222;
+            --footer: #1e1e1e;
+        }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            background-color: #f5f5f5;
+            background-color: var(--bg);
+            color: var(--text);
         }
+
+        /* === HEADER + MENU === */
         header {
-            background-color: #0b4f6c;
+            background: linear-gradient(90deg, var(--blue), var(--blue-light));
             color: #fff;
             padding: 10px 20px;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
+
         nav {
             display: flex;
             justify-content: space-between;
@@ -26,10 +40,40 @@
             max-width: 1100px;
             margin: 0 auto;
         }
-        .logo {
-            font-weight: bold;
-            font-size: 20px;
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
+
+        .logo-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-svg {
+            width: 70px;  /* logo assez grand */
+            height: 70px;
+        }
+
+        .logo-text {
+            margin-top: 4px;
+            text-align: center;
+        }
+
+        .school-name {
+            font-weight: bold;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .school-subtitle {
+            font-size: 11px;
+            opacity: 0.9;
+        }
+
         .menu {
             list-style: none;
             display: flex;
@@ -37,16 +81,22 @@
             padding: 0;
             margin: 0;
         }
+
         .menu li a {
             color: #fff;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-        .menu li a:hover { text-decoration: underline; }
 
+        .menu li a:hover {
+            text-decoration: underline;
+        }
+
+        /* === HERO / BANNIÈRE === */
         .hero {
-            background: #0b4f6c;
+            background: linear-gradient(135deg, var(--blue), var(--green));
             min-height: 260px;
             display: flex;
             align-items: center;
@@ -54,16 +104,25 @@
             text-align: center;
             color: #fff;
         }
+
         .hero-content {
             max-width: 700px;
             padding: 20px;
         }
-        .hero h1 { margin: 0 0 10px; font-size: 32px; }
-        .hero p { margin: 0 0 20px; font-size: 16px; }
+
+        .hero h1 {
+            margin: 0 0 10px;
+            font-size: 32px;
+        }
+
+        .hero p {
+            margin: 0 0 20px;
+            font-size: 16px;
+        }
 
         .btn {
             display: inline-block;
-            background-color: #f5a623;
+            background-color: var(--gold);
             color: #fff;
             padding: 10px 18px;
             border-radius: 4px;
@@ -71,32 +130,52 @@
             font-size: 14px;
         }
 
+        .btn:hover {
+            filter: brightness(0.9);
+        }
+
+        /* === CONTENU PRINCIPAL === */
         main {
             max-width: 1100px;
             margin: 0 auto;
             padding: 20px 15px 40px;
-            background-color: #fff;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.03);
         }
-        section { margin-bottom: 30px; }
+
+        section {
+            margin-bottom: 30px;
+        }
+
         h2 {
             font-size: 22px;
             margin-bottom: 10px;
-            color: #0b4f6c;
+            color: var(--blue);
         }
-        h3 { font-size: 18px; margin-bottom: 8px; }
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: var(--blue);
+        }
 
         .two-columns {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
         }
-        .col { flex: 1; min-width: 260px; }
+
+        .col {
+            flex: 1;
+            min-width: 260px;
+        }
 
         .highlight-cards {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
         }
+
         .card {
             background-color: #f7f7f7;
             border-radius: 6px;
@@ -106,15 +185,26 @@
             box-shadow: 0 1px 3px rgba(0,0,0,0.08);
         }
 
+        .card h3 {
+            margin-top: 0;
+        }
+
+        /* === PIED DE PAGE === */
         footer {
-            background-color: #222;
+            background-color: var(--footer);
             color: #ddd;
             padding: 15px 20px;
             font-size: 13px;
+            margin-top: 20px;
         }
+
         .footer-inner {
             max-width: 1100px;
             margin: 0 auto;
+        }
+
+        .footer-inner a {
+            color: #ffffff;
         }
 
         @media (max-width: 768px) {
@@ -123,8 +213,13 @@
                 align-items: flex-start;
                 gap: 8px;
             }
-            .menu { flex-wrap: wrap; gap: 8px; }
-            .hero h1 { font-size: 24px; }
+            .menu {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            .hero h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
@@ -132,7 +227,36 @@
 
 <header>
     <nav>
-        <div class="logo">Lycée de Kafountine</div>
+        <div class="brand">
+            <div class="logo-block">
+                <!-- LOGO ÉDUCATION + VERT CASAMANCE (SVG) -->
+                <svg class="logo-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <!-- Cercle de fond -->
+                    <circle cx="60" cy="60" r="52" fill="#ffffff" stroke="#0b4f6c" stroke-width="4" />
+                    <!-- Soleil (savoir, lumière) -->
+                    <circle cx="60" cy="38" r="9" fill="#f5a623" />
+                    <!-- Rayons du soleil -->
+                    <line x1="60" y1="20" x2="60" y2="28" stroke="#f5a623" stroke-width="2" />
+                    <line x1="44" y1="24" x2="49" y2="31" stroke="#f5a623" stroke-width="2" />
+                    <line x1="76" y1="24" x2="71" y2="31" stroke="#f5a623" stroke-width="2" />
+                    <!-- Livre ouvert (éducation) -->
+                    <path d="M26 78 Q46 66 60 66 Q74 66 94 78 L94 92 Q74 80 60 80 Q46 80 26 92 Z"
+                          fill="#0b4f6c" />
+                    <!-- Pages intérieures -->
+                    <path d="M60 66 Q46 66 34 74 Q46 72 60 72 Q74 72 86 74 Q74 66 60 66 Z"
+                          fill="#ffffff" opacity="0.85" />
+                    <!-- Feuille verte (Casamance / végétation) -->
+                    <path d="M60 60 C70 58 78 52 82 42 C72 44 64 50 60 60 Z"
+                          fill="#2e8b57" opacity="0.9" />
+                </svg>
+
+                <div class="logo-text">
+                    <div class="school-name">Lycée de Kafountine</div>
+                    <div class="school-subtitle">Éducation · Savoir · Citoyenneté</div>
+                </div>
+            </div>
+        </div>
+
         <ul class="menu">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="le-lycee.html">Le Lycée</a></li>
@@ -179,3 +303,54 @@
                     Au nom de toute la communauté éducative, je souhaite la bienvenue à nos élèves,
                     à leurs parents et à nos partenaires.
                 </p>
+                <p>
+                    Le lycée s’engage chaque jour pour la réussite scolaire, l’éducation citoyenne
+                    et la préparation à l’enseignement supérieur ou à la vie professionnelle.
+                </p>
+                <p>
+                    Nous croyons en la valeur du travail, de la discipline, du respect mutuel
+                    et de la solidarité.
+                </p>
+                <p><strong>M. Eugène DIATTA</strong><br>Proviseur du Lycée de Kafountine</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Informations importantes</h2>
+        <div class="highlight-cards">
+            <div class="card" id="inscriptions">
+                <h3>Inscriptions & réinscriptions</h3>
+                <p>Consultez les modalités d’inscription et les pièces à fournir.</p>
+                <p><a href="documents.html" class="btn">Dossier d’inscription</a></p>
+            </div>
+            <div class="card">
+                <h3>Calendrier scolaire</h3>
+                <p>Dates des trimestres, compositions, examens et vacances.</p>
+                <p><a href="documents.html" class="btn">Voir le calendrier</a></p>
+            </div>
+            <div class="card">
+                <h3>Actualités</h3>
+                <p>Résultats, événements, journées culturelles et plus encore.</p>
+                <p><a href="actualites.html" class="btn">Voir les actualités</a></p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <p><strong>Lycée de Kafountine</strong> – Kafountine, Sénégal</p>
+        <p>
+            Pour toutes les coordonnées (téléphone, e-mail, localisation),
+            veuillez consulter la page <a href="contact.html">Contact</a>.
+        </p>
+        <p>&copy; <span id="year"></span> Lycée de Kafountine – Tous droits réservés.</p>
+    </div>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</footer>
+
+</body>
+</html>
