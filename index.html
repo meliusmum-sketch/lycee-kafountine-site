@@ -53,7 +53,6 @@
             justify-content: center;
             text-align: center;
             color: #fff;
-            position: relative;
         }
         .hero-content {
             max-width: 700px;
@@ -117,6 +116,16 @@
             max-width: 1100px;
             margin: 0 auto;
         }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            .menu { flex-wrap: wrap; gap: 8px; }
+            .hero h1 { font-size: 24px; }
+        }
     </style>
 </head>
 <body>
@@ -157,6 +166,10 @@
                     de divers horizons. Notre ambition est de proposer un cadre d’apprentissage sérieux,
                     exigeant et bienveillant.
                 </p>
+                <p>
+                    Le Lycée de Kafountine joue un rôle majeur dans la dynamique éducative de la région
+                    et travaille en étroite collaboration avec les familles, les autorités et les partenaires.
+                </p>
                 <p><a href="le-lycee.html">En savoir plus sur le lycée &raquo;</a></p>
             </div>
 
@@ -166,40 +179,3 @@
                     Au nom de toute la communauté éducative, je souhaite la bienvenue à nos élèves,
                     à leurs parents et à nos partenaires.
                 </p>
-                <p><strong>[M. Eugène DIATTA]</strong><br>Proviseur du Lycée de Kafountine</p>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Informations importantes</h2>
-        <div class="highlight-cards">
-            <div class="card" id="inscriptions">
-                <h3>Inscriptions & réinscriptions</h3>
-                <p>Consultez les modalités d’inscription et les pièces à fournir.</p>
-            </div>
-            <div class="card">
-                <h3>Calendrier scolaire</h3>
-                <p>Dates des trimestres, compositions, examens et vacances.</p>
-            </div>
-            <div class="card">
-                <h3>Actualités</h3>
-                <p>Résultats, événements, journées culturelles et plus encore.</p>
-            </div>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <div class="footer-inner">
-        <p><strong>Lycée de Kafountine</strong> – Kafountine, Sénégal</p>
-        <p>
-            Pour toutes les coordonnées (téléphone, e-mail, localisation),
-            veuillez consulter la page <a href="contact.html" style="color:#fff; text-decoration:underline;">Contact</a>.
-        </p>
-        <p>&copy; Lycée de Kafountine – Tous droits réservés.</p>
-    </div>
-</footer>
-
-</body>
-</html>
