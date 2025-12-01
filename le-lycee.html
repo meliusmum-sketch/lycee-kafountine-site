@@ -69,6 +69,15 @@
             max-width: 1100px;
             margin: 0 auto;
         }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            .menu { flex-wrap: wrap; gap: 8px; }
+        }
     </style>
 </head>
 <body>
@@ -116,10 +125,11 @@
     <h2>Équipe dirigeante</h2>
     <p>L’équipe dirigeante du lycée comprend notamment :</p>
     <ul>
-        <li>Proviseur : [Nom du Proviseur]</li>
-        <li>Censeur : [Nom du Censeur]</li>
-        <li>Surveillant général : [Nom du Surveillant général]</li>
-        <li>Intendant : [Nom de l’Intendant]</li>
+        <li><strong>Proviseur :</strong> M. Eugène DIATTA – Tél. : +221 77 434 68 45</li>
+        <li><strong>Censeur :</strong> M. Ablaye DIEDHIOU – Tél. : +221 77 655 48 13</li>
+        <li><strong>Secrétariat / Matière comptable :</strong> M. Landing Marcel DIASSY – Tél. : 77 573 10 06</li>
+        <li><strong>Surveillant général :</strong> [Nom du Surveillant général]</li>
+        <li><strong>Intendant :</strong> [Nom de l’Intendant]</li>
     </ul>
 
     <h2>Chiffres clés</h2>
@@ -128,13 +138,15 @@
         <li>Nombre de classes : [………]</li>
         <li>Séries : Série L, Série S, [autres le cas échéant]</li>
     </ul>
-
 </main>
 
 <footer>
     <div class="footer-inner">
         <p><strong>Lycée de Kafountine</strong> – Kafountine, Sénégal</p>
-        <p>Tél. : [Numéro du secrétariat] – E-mail : [adresse e-mail officielle]</p>
+        <p>
+            Pour toutes les coordonnées (téléphone, e-mail, localisation),
+            veuillez consulter la page <a href="contact.html" style="color:#fff; text-decoration:underline;">Contact</a>.
+        </p>
         <p>&copy; <span id="year"></span> Lycée de Kafountine – Tous droits réservés.</p>
     </div>
     <script>
